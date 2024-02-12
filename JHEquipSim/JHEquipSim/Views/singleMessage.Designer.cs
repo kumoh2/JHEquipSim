@@ -62,6 +62,7 @@
             treeView1.Name = "treeView1";
             treeView1.Size = new Size(203, 418);
             treeView1.TabIndex = 4;
+            treeView1.NodeMouseDoubleClick += TreeView1_NodeMouseDoubleClick;
             // 
             // btn_add_treexml
             // 
