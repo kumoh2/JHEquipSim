@@ -43,7 +43,7 @@
             // sendXmlButton
             // 
             sendXmlButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sendXmlButton.Location = new Point(720, 3);
+            sendXmlButton.Location = new Point(720, 2);
             sendXmlButton.Name = "sendXmlButton";
             sendXmlButton.Size = new Size(75, 23);
             sendXmlButton.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             // btn_add_scenario
             // 
-            btn_add_scenario.Location = new Point(336, 4);
+            btn_add_scenario.Location = new Point(335, 3);
             btn_add_scenario.Name = "btn_add_scenario";
             btn_add_scenario.Size = new Size(88, 23);
             btn_add_scenario.TabIndex = 9;
@@ -116,7 +116,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(425, 4);
+            button1.Location = new Point(425, 3);
             button1.Name = "button1";
             button1.Size = new Size(107, 23);
             button1.TabIndex = 11;
@@ -125,7 +125,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(533, 4);
+            button2.Location = new Point(534, 3);
             button2.Name = "button2";
             button2.Size = new Size(106, 23);
             button2.TabIndex = 12;
