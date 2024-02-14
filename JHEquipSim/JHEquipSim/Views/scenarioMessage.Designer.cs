@@ -35,9 +35,9 @@
             btn_rename = new Button();
             comboBox1 = new ComboBox();
             btn_add_scenario = new Button();
-            listView1 = new ListView();
             button1 = new Button();
             button2 = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // sendXmlButton
@@ -55,7 +55,7 @@
             // 
             treeView1.Location = new Point(0, 29);
             treeView1.Name = "treeView1";
-            treeView1.Size = new Size(203, 418);
+            treeView1.Size = new Size(203, 424);
             treeView1.TabIndex = 4;
             treeView1.NodeMouseDoubleClick += TreeView1_NodeMouseDoubleClick;
             // 
@@ -96,6 +96,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 8;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // btn_add_scenario
             // 
@@ -105,14 +106,6 @@
             btn_add_scenario.TabIndex = 9;
             btn_add_scenario.Text = "add scenario";
             btn_add_scenario.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            listView1.Location = new Point(207, 29);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(588, 418);
-            listView1.TabIndex = 10;
-            listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button1
             // 
@@ -132,13 +125,23 @@
             button2.Text = "edit param value";
             button2.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(206, 29);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(591, 424);
+            listBox1.TabIndex = 13;
+            // 
             // scenarioMessage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(listBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(listView1);
             Controls.Add(btn_add_scenario);
             Controls.Add(comboBox1);
             Controls.Add(btn_rename);
@@ -147,7 +150,7 @@
             Controls.Add(treeView1);
             Controls.Add(sendXmlButton);
             Name = "scenarioMessage";
-            Size = new Size(800, 450);
+            Size = new Size(800, 456);
             ResumeLayout(false);
         }
 
@@ -159,8 +162,8 @@
         private Button btn_rename;
         private ComboBox comboBox1;
         private Button btn_add_scenario;
-        private ListView listView1;
         private Button button1;
         private Button button2;
+        private ListBox listBox1;
     }
 }
