@@ -35,15 +35,15 @@
             btn_rename = new Button();
             comboBox1 = new ComboBox();
             btn_add_scenario = new Button();
-            button1 = new Button();
-            button2 = new Button();
             listBox1 = new ListBox();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // sendXmlButton
             // 
             sendXmlButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sendXmlButton.Location = new Point(720, 2);
+            sendXmlButton.Location = new Point(848, 2);
             sendXmlButton.Name = "sendXmlButton";
             sendXmlButton.Size = new Size(75, 23);
             sendXmlButton.TabIndex = 2;
@@ -107,24 +107,6 @@
             btn_add_scenario.Text = "add scenario";
             btn_add_scenario.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            button1.Location = new Point(425, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 23);
-            button1.TabIndex = 11;
-            button1.Text = "edit global value";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(534, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 23);
-            button2.TabIndex = 12;
-            button2.Text = "edit param value";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // listBox1
             // 
             listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -132,16 +114,23 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(206, 29);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(591, 424);
+            listBox1.Size = new Size(437, 424);
             listBox1.TabIndex = 13;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(646, 29);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(277, 424);
+            dataGridView1.TabIndex = 14;
             // 
             // scenarioMessage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dataGridView1);
             Controls.Add(listBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(btn_add_scenario);
             Controls.Add(comboBox1);
             Controls.Add(btn_rename);
@@ -150,7 +139,8 @@
             Controls.Add(treeView1);
             Controls.Add(sendXmlButton);
             Name = "scenarioMessage";
-            Size = new Size(800, 456);
+            Size = new Size(928, 456);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -162,8 +152,7 @@
         private Button btn_rename;
         private ComboBox comboBox1;
         private Button btn_add_scenario;
-        private Button button1;
-        private Button button2;
         private ListBox listBox1;
+        private DataGridView dataGridView1;
     }
 }
