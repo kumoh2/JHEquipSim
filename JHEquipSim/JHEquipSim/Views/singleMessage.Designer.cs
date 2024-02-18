@@ -48,7 +48,7 @@
             // sendXmlButton
             // 
             sendXmlButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sendXmlButton.Location = new Point(720, 0);
+            sendXmlButton.Location = new Point(720, 2);
             sendXmlButton.Name = "sendXmlButton";
             sendXmlButton.Size = new Size(75, 23);
             sendXmlButton.TabIndex = 2;
@@ -58,6 +58,7 @@
             // 
             // treeView1
             // 
+            treeView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             treeView1.Location = new Point(0, 29);
             treeView1.Name = "treeView1";
             treeView1.Size = new Size(203, 418);
