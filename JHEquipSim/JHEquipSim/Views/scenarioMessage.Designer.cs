@@ -35,8 +35,8 @@
             btn_rename = new Button();
             comboBox1 = new ComboBox();
             dataGridView2 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            paramremove = new Button();
+            paramadd = new Button();
             dataGridView1 = new DataGridView();
             remove_step = new Button();
             edit_g_various = new Button();
@@ -47,7 +47,7 @@
             // sendXmlButton
             // 
             sendXmlButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sendXmlButton.Location = new Point(565, 3);
+            sendXmlButton.Location = new Point(540, 4);
             sendXmlButton.Name = "sendXmlButton";
             sendXmlButton.Size = new Size(75, 23);
             sendXmlButton.TabIndex = 2;
@@ -105,42 +105,50 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
             dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(646, 30);
+            dataGridView2.Location = new Point(621, 30);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(277, 423);
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.Size = new Size(377, 423);
             dataGridView2.TabIndex = 14;
+            dataGridView2.CellEndEdit += dataGridView2_CellEndEdit;
             // 
-            // button1
+            // paramremove
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(670, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(25, 23);
-            button1.TabIndex = 17;
-            button1.Text = "-";
-            button1.UseVisualStyleBackColor = true;
+            paramremove.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            paramremove.Location = new Point(648, 4);
+            paramremove.Name = "paramremove";
+            paramremove.Size = new Size(25, 23);
+            paramremove.TabIndex = 17;
+            paramremove.Text = "-";
+            paramremove.UseVisualStyleBackColor = true;
+            paramremove.Click += paramremove_Click;
             // 
-            // button2
+            // paramadd
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Location = new Point(645, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(25, 23);
-            button2.TabIndex = 16;
-            button2.Text = "+";
-            button2.UseVisualStyleBackColor = true;
+            paramadd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            paramadd.Location = new Point(621, 4);
+            paramadd.Name = "paramadd";
+            paramadd.Size = new Size(25, 23);
+            paramadd.TabIndex = 16;
+            paramadd.Text = "+";
+            paramadd.UseVisualStyleBackColor = true;
+            paramadd.Click += paramadd_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(209, 30);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(431, 423);
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(406, 423);
             dataGridView1.TabIndex = 18;
             dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // remove_step
             // 
@@ -154,12 +162,13 @@
             // 
             // edit_g_various
             // 
-            edit_g_various.Location = new Point(414, 4);
+            edit_g_various.Location = new Point(415, 4);
             edit_g_various.Name = "edit_g_various";
             edit_g_various.Size = new Size(92, 23);
             edit_g_various.TabIndex = 20;
             edit_g_various.Text = "edit_g_various";
             edit_g_various.UseVisualStyleBackColor = true;
+            edit_g_various.Click += edit_g_various_Click;
             // 
             // scenarioMessage
             // 
@@ -168,8 +177,8 @@
             Controls.Add(edit_g_various);
             Controls.Add(remove_step);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(button2);
+            Controls.Add(paramremove);
+            Controls.Add(paramadd);
             Controls.Add(dataGridView2);
             Controls.Add(comboBox1);
             Controls.Add(btn_rename);
@@ -178,7 +187,7 @@
             Controls.Add(treeView1);
             Controls.Add(sendXmlButton);
             Name = "scenarioMessage";
-            Size = new Size(928, 456);
+            Size = new Size(1003, 456);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -192,8 +201,8 @@
         private Button btn_rename;
         private ComboBox comboBox1;
         private DataGridView dataGridView2;
-        private Button button1;
-        private Button button2;
+        private Button paramremove;
+        private Button paramadd;
         private DataGridView dataGridView1;
         private Button remove_step;
         private Button edit_g_various;
