@@ -42,7 +42,7 @@
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(814, 461);
+            tabControl1.Size = new Size(1008, 561);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -50,7 +50,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(806, 433);
+            tabPage1.Size = new Size(1000, 533);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "singleXML";
             tabPage1.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(806, 433);
+            tabPage2.Size = new Size(1000, 523);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Scenario";
             tabPage2.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 461);
+            ClientSize = new Size(1008, 561);
             Controls.Add(tabControl1);
             Name = "JHESMain";
             Text = "Form1";

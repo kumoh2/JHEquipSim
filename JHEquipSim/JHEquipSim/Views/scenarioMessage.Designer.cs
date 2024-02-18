@@ -34,16 +34,20 @@
             btn_remove_treexml = new Button();
             btn_rename = new Button();
             comboBox1 = new ComboBox();
-            btn_add_scenario = new Button();
-            listBox1 = new ListBox();
+            dataGridView2 = new DataGridView();
+            button1 = new Button();
+            button2 = new Button();
             dataGridView1 = new DataGridView();
+            remove_step = new Button();
+            edit_g_various = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // sendXmlButton
             // 
             sendXmlButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sendXmlButton.Location = new Point(848, 2);
+            sendXmlButton.Location = new Point(565, 3);
             sendXmlButton.Name = "sendXmlButton";
             sendXmlButton.Size = new Size(75, 23);
             sendXmlButton.TabIndex = 2;
@@ -53,7 +57,8 @@
             // 
             // treeView1
             // 
-            treeView1.Location = new Point(0, 29);
+            treeView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            treeView1.Location = new Point(0, 30);
             treeView1.Name = "treeView1";
             treeView1.Size = new Size(203, 424);
             treeView1.TabIndex = 4;
@@ -98,40 +103,74 @@
             comboBox1.TabIndex = 8;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // btn_add_scenario
+            // dataGridView2
             // 
-            btn_add_scenario.Location = new Point(335, 3);
-            btn_add_scenario.Name = "btn_add_scenario";
-            btn_add_scenario.Size = new Size(88, 23);
-            btn_add_scenario.TabIndex = 9;
-            btn_add_scenario.Text = "add scenario";
-            btn_add_scenario.UseVisualStyleBackColor = true;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(646, 30);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(277, 423);
+            dataGridView2.TabIndex = 14;
             // 
-            // listBox1
+            // button1
             // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(206, 29);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(437, 424);
-            listBox1.TabIndex = 13;
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.Location = new Point(670, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(25, 23);
+            button1.TabIndex = 17;
+            button1.Text = "-";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.Location = new Point(645, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(25, 23);
+            button2.TabIndex = 16;
+            button2.Text = "+";
+            button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(646, 29);
+            dataGridView1.Location = new Point(209, 30);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(277, 424);
-            dataGridView1.TabIndex = 14;
+            dataGridView1.Size = new Size(431, 423);
+            dataGridView1.TabIndex = 18;
+            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
+            // 
+            // remove_step
+            // 
+            remove_step.Location = new Point(330, 4);
+            remove_step.Name = "remove_step";
+            remove_step.Size = new Size(88, 23);
+            remove_step.TabIndex = 19;
+            remove_step.Text = "remove step";
+            remove_step.UseVisualStyleBackColor = true;
+            remove_step.Click += remove_step_Click;
+            // 
+            // edit_g_various
+            // 
+            edit_g_various.Location = new Point(414, 4);
+            edit_g_various.Name = "edit_g_various";
+            edit_g_various.Size = new Size(92, 23);
+            edit_g_various.TabIndex = 20;
+            edit_g_various.Text = "edit_g_various";
+            edit_g_various.UseVisualStyleBackColor = true;
             // 
             // scenarioMessage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(edit_g_various);
+            Controls.Add(remove_step);
             Controls.Add(dataGridView1);
-            Controls.Add(listBox1);
-            Controls.Add(btn_add_scenario);
+            Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(dataGridView2);
             Controls.Add(comboBox1);
             Controls.Add(btn_rename);
             Controls.Add(btn_remove_treexml);
@@ -140,6 +179,7 @@
             Controls.Add(sendXmlButton);
             Name = "scenarioMessage";
             Size = new Size(928, 456);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -151,8 +191,11 @@
         private Button btn_remove_treexml;
         private Button btn_rename;
         private ComboBox comboBox1;
-        private Button btn_add_scenario;
-        private ListBox listBox1;
+        private DataGridView dataGridView2;
+        private Button button1;
+        private Button button2;
         private DataGridView dataGridView1;
+        private Button remove_step;
+        private Button edit_g_various;
     }
 }
