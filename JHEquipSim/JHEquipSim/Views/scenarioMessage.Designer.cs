@@ -1,4 +1,7 @@
-﻿namespace JHEquipSim.Views
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace JHEquipSim.Views
 {
     partial class scenarioMessage
     {

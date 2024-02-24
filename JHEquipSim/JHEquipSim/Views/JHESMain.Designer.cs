@@ -1,4 +1,7 @@
-﻿namespace JHEquipSim
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace JHEquipSim
 {
     partial class JHESMain
     {

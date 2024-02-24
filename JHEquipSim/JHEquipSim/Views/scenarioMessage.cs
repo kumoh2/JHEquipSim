@@ -1,6 +1,12 @@
 ﻿using JHEquipSim.Helpers;
 using JHEquipSim.ServiceReference;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.ServiceModel;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -166,10 +172,9 @@ namespace JHEquipSim.Views
             }
             finally
             {
-                if (client.State == CommunicationState.Opened)
-                {
-                    await client.CloseAsync();
-                }
+                var state = ((ICommunicationObject)client).State;
+
+                await Task.Run(() => client.Close());
             }
         }
 

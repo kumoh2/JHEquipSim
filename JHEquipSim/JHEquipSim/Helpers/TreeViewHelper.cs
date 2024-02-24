@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace JHEquipSim.Helpers
 {
@@ -28,6 +30,29 @@ namespace JHEquipSim.Helpers
             }
         }
 
+        public static string ShowDialog(string text, string caption, string defaultValue = "")
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
+            textBox.Text = defaultValue;
+            Button confirmationButton = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            confirmationButton.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmationButton);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmationButton;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : null;
+        }
+
         public static void AddNewGroupFolder(TreeView treeView, string rootPath)
         {
             if (treeView.SelectedNode == null || treeView.SelectedNode.Parent != null)
@@ -36,12 +61,12 @@ namespace JHEquipSim.Helpers
                 return;
             }
 
-            string groupName = Microsoft.VisualBasic.Interaction.InputBox("새 그룹 폴더 이름을 입력하세요:", "그룹 폴더 생성", "새 그룹");
+            // string groupName = Microsoft.VisualBasic.Interaction.InputBox(...); 대신
+            string groupName = ShowDialog("새 그룹 폴더 이름을 입력하세요:", "그룹 폴더 생성", "새 그룹");
             if (!string.IsNullOrWhiteSpace(groupName))
             {
-                string newPath = ResolveFileNameConflict(treeView.SelectedNode.Tag.ToString(), groupName, true); // 폴더 이름 충돌 확인
+                string newPath = ResolveFileNameConflict(treeView.SelectedNode.Tag.ToString(), groupName, true);
 
-                // ResolveFileNameConflict에서 null이 반환되었는지 확인
                 if (newPath != null)
                 {
                     Directory.CreateDirectory(newPath);
@@ -138,7 +163,9 @@ namespace JHEquipSim.Helpers
                 string currentPath = selectedNode.Tag.ToString();
                 bool isFile = File.Exists(currentPath);
                 bool isDirectory = Directory.Exists(currentPath);
-                string newName = Microsoft.VisualBasic.Interaction.InputBox(
+
+                // string newName = Microsoft.VisualBasic.Interaction.InputBox(...); 대신
+                string newName = ShowDialog(
                     "새 이름을 입력하세요" + (isFile ? " (확장자 포함):" : ":"),
                     isFile ? "파일 이름 수정" : "폴더 이름 수정",
                     isFile ? Path.GetFileName(currentPath) : new DirectoryInfo(currentPath).Name
