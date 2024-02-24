@@ -1,5 +1,10 @@
 ﻿using JHEquipSim.Helpers;
 using JHEquipSim.ServiceReference;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace JHEquipSim.Views
@@ -43,7 +48,8 @@ namespace JHEquipSim.Views
                 var client = new XmlReceiverServiceClient();
                 await client.ReceiveXmlAsync(richTextBox1.Text);
                 MessageBox.Show("XML 데이터가 서버로 전송되었습니다.", "전송 성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                await client.CloseAsync();
+
+                await Task.Run(() => client.Close());
             }
             catch (Exception ex)
             {
