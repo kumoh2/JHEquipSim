@@ -39,6 +39,9 @@ namespace JHEquipSim.Views
 
             dataGridView2.Columns.Add("ParamName", "ParamName");
             dataGridView2.Columns.Add("ParamValue", "ParamValue");
+
+            dataGridView3.Columns.Add("VariableName", "VariableName");
+            dataGridView3.Columns.Add("VariableValue", "VariableValue");
         }
 
         private void InitializeComboBox(string scenarioFolderPath)

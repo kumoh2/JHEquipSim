@@ -46,7 +46,7 @@ namespace JHEquipSim
             this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1894, 1009);
+            this.tabControl1.Size = new System.Drawing.Size(2374, 1279);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -55,7 +55,7 @@ namespace JHEquipSim
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1878, 962);
+            this.tabPage1.Size = new System.Drawing.Size(2358, 1232);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "singleXML";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@ namespace JHEquipSim
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1856, 851);
+            this.tabPage2.Size = new System.Drawing.Size(1878, 962);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Scenario";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace JHEquipSim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1894, 1009);
+            this.ClientSize = new System.Drawing.Size(2374, 1279);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "JHESMain";
