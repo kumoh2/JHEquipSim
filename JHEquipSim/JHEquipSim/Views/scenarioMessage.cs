@@ -599,25 +599,5 @@ namespace JHEquipSim.Views
                 }
             }
         }
-
-        private Dictionary<string, string> globalVariables = new Dictionary<string, string>();
-
-        private void edit_g_various_Click(object sender, EventArgs e)
-        {
-            // 글로벌 변수 편집 폼을 엽니다.
-            using (var form = new GlobalVariableForm())
-            {
-            }
-        }
-
-        private string ReplaceGlobalVariables(string originalXmlContent)
-        {
-            // originalXmlContent에서 globalVariables에 정의된 변수를 모두 찾아 교체합니다.
-            foreach (var variable in globalVariables)
-            {
-                originalXmlContent = originalXmlContent.Replace($"${{{variable.Key}}}", variable.Value);
-            }
-            return originalXmlContent;
-        }
     }
 }

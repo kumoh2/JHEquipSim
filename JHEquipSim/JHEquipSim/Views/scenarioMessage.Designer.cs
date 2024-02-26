@@ -42,7 +42,6 @@ namespace JHEquipSim.Views
             this.paramadd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.remove_step = new System.Windows.Forms.Button();
-            this.edit_g_various = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -173,16 +172,6 @@ namespace JHEquipSim.Views
             this.remove_step.Text = "remove step";
             this.remove_step.UseVisualStyleBackColor = true;
             // 
-            // edit_g_various
-            // 
-            this.edit_g_various.Location = new System.Drawing.Point(771, 6);
-            this.edit_g_various.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.edit_g_various.Name = "edit_g_various";
-            this.edit_g_various.Size = new System.Drawing.Size(171, 37);
-            this.edit_g_various.TabIndex = 20;
-            this.edit_g_various.Text = "edit_g_various";
-            this.edit_g_various.UseVisualStyleBackColor = true;
-            // 
             // dataGridView3
             // 
             this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -246,7 +235,6 @@ namespace JHEquipSim.Views
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.edit_g_various);
             this.Controls.Add(this.remove_step);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.paramremove);
@@ -281,7 +269,6 @@ namespace JHEquipSim.Views
         private Button paramadd;
         private DataGridView dataGridView1;
         private Button remove_step;
-        private Button edit_g_various;
         private DataGridView dataGridView3;
         private Label label2;
         private Label label3;
